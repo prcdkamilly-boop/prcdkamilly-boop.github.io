@@ -3,8 +3,8 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main # 監聽 main 分支的 push 事件
-  workflow_dispatch: # 允許手動觸發工作流
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -15,40 +15,23 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.125.0 # 建議使用穩定版
-      NODE_VERSION: 20.x
-      TZ: Asia/Taipei
     steps:
-      - name: Checkout repository and submodules
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive # 關鍵：確保檢出主題子模組
-          fetch-depth: 0
+        # 注意：這裡去掉了 submodules: recursive，因為您已經手動把主題放進去了
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '${{ env.HUGO_VERSION }}'
-          extended: true # 確保使用 extended 版本
+          hugo-version: 'latest'
+          extended: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '${{ env.NODE_VERSION }}'
-
-      - name: Build Hugo site
-        env:
-          HUGO_BASEURL: https://prcdkamilly-boop.github.io/
+      - name: Build with Hugo
         run: |
-          hugo --gc --minify --baseURL "${{ env.HUGO_BASEURL }}"
+          hugo --gc --minify --baseURL "https://prcdkamilly-boop.github.io/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
