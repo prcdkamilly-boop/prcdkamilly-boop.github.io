@@ -1,6 +1,6 @@
 baseURL = 'https://prcdkamilly-boop.github.io/'
 languageCode = 'zh-tw'
-title = '駭客脈動中心的博客'
+title = '駭客脈動中心'
 theme = 'PaperMod'
 
 [markup]
@@ -9,8 +9,31 @@ theme = 'PaperMod'
       unsafe = true
 
 [params]
-  customCSS = ["css/custom.css"]
-  [params.assets]
-    disableFingerprinting = true
+    # 保留您原本的自定義 CSS 設定
+    customCSS = ["css/custom.css"]
+    
+    # 網站圖示 (Favicon ) - 指向 static/images/hacker_logo.png
+    [params.assets]
+        favicon = "images/hacker_logo.png"
+        disableFingerprinting = true
+
+    # 首頁大頭貼與歡迎詞
+    [params.homeInfoParams]
+        Title = "歡迎來到駭客脈動中心 💻"
+        Content = "專注於網路安全、滲透測試與數位脈動的技術分享。在這裡，我們探索代碼背後的真相。"
+
+    # 顯示閱讀時間與目錄
+    ShowReadingTime = true
+    ShowToc = true
+    
+    # 預設開啟深色模式 (更符合駭客風格)
+    defaultTheme = "dark"
+    disableThemeToggle = false
+
+    # 社交連結
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/prcdkamilly-boop"
+
 
   
