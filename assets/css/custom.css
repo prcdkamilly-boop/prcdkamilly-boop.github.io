@@ -1,0 +1,19 @@
+/* 讓所有文章圖片自動優化 */
+.post-content img {
+  display: block;
+  margin: 30px auto;      /* 上下間距 + 置中 */
+  max-width: 100%;        /* 自適應 */
+  height: auto;
+  border-radius: 10px;    /* 圓角 */
+}
+
+/* 限制最大寬度（更像專業博客） */
+.post-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* 圖片下方說明文字（如果有） */
+.post-content p {
+  text-align: left;
+}

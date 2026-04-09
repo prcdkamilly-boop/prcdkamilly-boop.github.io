@@ -1,0 +1,11 @@
+baseURL = "https://prcdkamilly-boop.github.io/"
+languageCode = "zh-tw"
+title = "駭客脈動中心的博客"
+theme = "PaperMod"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+[params]
+  customCSS = ["css/custom.css"]
+  
