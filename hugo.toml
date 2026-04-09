@@ -9,31 +9,28 @@ theme = 'PaperMod'
       unsafe = true
 
 [params]
-    # 保留您原本的自定義 CSS 設定
+    # 啟用剛才建立的自定義 CSS
     customCSS = ["css/custom.css"]
     
-    # 網站圖示 (Favicon ) - 指向 static/images/hacker_logo.png
+    # 網站圖示 (Favicon )
     [params.assets]
         favicon = "images/hacker_logo.png"
         disableFingerprinting = true
 
     # 首頁大頭貼與歡迎詞
     [params.homeInfoParams]
-        Title = "歡迎來到駭客脈動中心 💻"
-        Content = "專注於網路安全、滲透測試與數位脈動的技術分享。在這裡，我們探索代碼背後的真相。"
+        Title: "歡迎來到駭客脈動中心 💻"
+        Content: "專注於網路安全、滲透測試與數位脈動的技術分享。在這裡，我們探索代碼背後的真相。"
 
     # 顯示閱讀時間與目錄
-    ShowReadingTime = true
-    ShowToc = true
+    ShowReadingTime: true
+    ShowToc: true
     
-    # 預設開啟深色模式 (更符合駭客風格)
-    defaultTheme = "dark"
-    disableThemeToggle = false
+    # 預設開啟深色模式
+    defaultTheme: "dark"
+    disableThemeToggle: true # 駭客不需要切換淺色模式
 
-    # 社交連結
+    # 社交連結 - 換成 Telegram
     [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/prcdkamilly-boop"
-
-
-  
+        name = "telegram"
+        url = "https://t.me/HackPulse_Central"
