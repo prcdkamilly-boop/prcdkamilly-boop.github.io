@@ -6,31 +6,33 @@ theme = 'PaperMod'
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true
+      unsafe = true # 關鍵：允許在 Markdown 中使用 HTML
 
 [params]
-    # 啟用自定義 CSS
+    # 修正 CSS 路徑
     customCSS = ["css/custom.css"]
     
-    # 網站圖示 (Favicon )
     [params.assets]
         favicon = "images/hacker_logo.png"
         disableFingerprinting = true
 
-    # 首頁大頭貼與歡迎詞 (修正了這裡的等號)
+    # 首頁大頭貼與歡迎詞 - 加入醒目的 Telegram 連結
     [params.homeInfoParams]
         Title = "歡迎來到駭客脈動中心 💻"
-        Content = "專注於網路安全、滲透測試與數位脈動的技術分享。在這裡，我們探索代碼背後的真相。"
+        Content = """
+專注於網路安全、滲透測試與數位脈動的技術分享 。在這裡，我們探索代碼背後的真相。  
+  
 
-    # 顯示閱讀時間與目錄
+<a href='https://t.me/HackPulse_Central' style='color: #00ff41; font-size: 1.5rem; font-weight: bold; text-decoration: none; text-shadow: 0 0 10px #00ff41; border: 1px solid #00ff41; padding: 10px 20px; display: inline-block; border-radius: 5px;'>
+    ⚡ 請聯絡 Telegram: @HackPulse_Central
+</a>
+"""
+
     ShowReadingTime = true
     ShowToc = true
-    
-    # 預設開啟深色模式
     defaultTheme = "dark"
     disableThemeToggle = true
 
-    # 社交連結 - Telegram
     [[params.socialIcons]]
         name = "telegram"
         url = "https://t.me/HackPulse_Central"

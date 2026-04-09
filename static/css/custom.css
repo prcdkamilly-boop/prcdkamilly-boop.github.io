@@ -1,44 +1,38 @@
-/* 駭客風格自定義樣式 */
-:root {
-    --theme: #000000; /* 純黑背景 */
-    --primary: #00ff41; /* 經典駭客綠文字 */
-    --secondary: #008f11; /* 深綠色次要文字 */
-    --tertiary: #003b00; /* 極深綠色 */
-    --content: #00ff41; /* 內容文字顏色 */
-    --hljs-bg: #050505; /* 代碼塊背景 */
-    --code-bg: #0a0a0a; /* 行內代碼背景 */
-}
-
+/* 駭客風格強力覆蓋 */
 body {
-    background-color: var(--theme);
-    color: var(--primary);
-    font-family: 'Courier New', Courier, monospace; /* 使用等寬字體模擬終端機 */
-    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5); /* 文字發光效果 */
+    background-color: #000000 !important;
+    color: #00ff41 !important;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
-/* 標題顏色 */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--primary) !important;
+/* 讓所有文字都有發光感 */
+* {
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
 }
 
-/* 連結顏色 */
+/* 導覽列背景 */
+.header {
+    background: #000000 !important;
+    border-bottom: 1px solid #00ff41;
+}
+
+/* 文章標題 */
+.post-title, .entry-header h2 {
+    color: #00ff41 !important;
+}
+
+/* 連結樣式 */
 a {
     color: #00ff41 !important;
-    text-decoration: underline;
 }
 
-a:hover {
-    color: #ffffff !important;
-    background-color: #008f11;
-}
-
-/* 導覽列與頁尾 */
-.header, .footer {
-    background: rgba(0, 0, 0, 0.9);
-    border-bottom: 1px solid var(--primary);
-}
-
-/* 社交圖標顏色 */
+/* 社交圖標發光 */
 .social-icons a {
+    color: #00ff41 !important;
     filter: drop-shadow(0 0 5px #00ff41);
+}
+
+/* 修正 PaperMod 的背景色 */
+.main {
+    background-color: #000000 !important;
 }
