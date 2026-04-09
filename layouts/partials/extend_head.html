@@ -1,0 +1,95 @@
+<style>
+    /* 1. 全站背景與文字顏色 (純黑 + 駭客綠 ) */
+    html, body, .main, .header, .footer, article, section, div, .post-content, .entry-content, .post-entry, .post-wrapper, .post-single {
+        background-color: #000000 !important;
+        background: #000000 !important;
+        color: #00ff41 !important;
+    }
+
+    /* 2. 網站寬度加大 */
+    .main { max-width: 1000px !important; margin: 0 auto !important; }
+
+    /* 3. 清晰等寬字體 */
+    * { font-family: 'Courier New', Courier, monospace !important; text-shadow: none !important; }
+
+    /* 4. 標題與連結顏色 */
+    h1, h2, h3, h4, h5, h6, .post-title, a { color: #00ff41 !important; }
+
+    /* 5. 隱藏作者名稱 */
+    .author, .meta-author { display: none !important; }
+
+    /* 6. 標題排版：佔據右側所有空間 */
+    .entry-header h2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #00ff41 !important;
+        margin: 0 !important;
+        font-size: 1.6rem !important;
+        line-height: 1.3;
+        flex: 1;
+    }
+
+    /* 7. 強制左側垂直排版 (縮圖在上，日期在下) */
+    @media screen and (min-width: 768px) {
+        .post-entry {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            gap: 40px !important;
+            padding: 25px !important;
+            border-bottom: 1px solid #003b00 !important;
+        }
+        
+        .post-entry .entry-cover {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            flex: 0 0 120px !important;
+            margin: 0 !important;
+        }
+
+        .entry-cover img {
+            width: 100px !important;
+            height: 75px !important;
+            border-radius: 4px;
+            border: 1px solid #00ff41;
+            object-fit: cover;
+            margin-bottom: 10px !important;
+        }
+
+        .entry-footer {
+            color: #00ff41 !important;
+            opacity: 0.9;
+            font-size: 0.85rem !important;
+            text-align: center !important;
+            margin: 0 !important;
+            width: 120px !important;
+            display: block !important;
+        }
+    }
+
+    /* 8. 修正 Tags 標籤背景 (解決白色背景問題) */
+    .post-tags a, .post-tag, .tag {
+        background-color: #003b00 !important;
+        color: #00ff41 !important;
+        border: 1px solid #00ff41 !important;
+        padding: 2px 8px !important;
+        border-radius: 3px !important;
+        margin: 2px !important;
+        display: inline-block !important;
+        text-decoration: none !important;
+    }
+
+    /* 9. 隱藏正文預覽 */
+    .entry-content { display: none !important; }
+
+    /* 手機版排版 */
+    @media screen and (max-width: 767px) {
+        .post-entry { padding: 15px !important; border-bottom: 1px solid #003b00 !important; }
+        .entry-cover img { width: 80px !important; height: 60px !important; margin-bottom: 5px !important; }
+        .entry-footer { font-size: 0.75rem !important; color: #00ff41 !important; text-align: left !important; }
+    }
+</style>

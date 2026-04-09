@@ -2,6 +2,13 @@
 title: "台灣駭客委托服務平臺---駭客脈動中心！"
 date: 2026-04-08
 draft: false
+ # 1. 設定置頂 (數字越小越前面，例如 -1)
+weight: -1 
+ # 2. 設定文章縮圖 (圖片需放在 static/images 下)
+cover:
+    image: "images/hacker_logo.png" 
+    alt: "文章封面圖"
+    caption: "圖片說明"
 tags: ["台灣駭客網站", "駭客脈動中心", "暗網駭客接單服務", "台灣駭客接案", "雇傭駭客", "委托駭客費用", "中文暗網駭客", "駭客破解服務"]
 categories: ["駭客服務"]
 ---
